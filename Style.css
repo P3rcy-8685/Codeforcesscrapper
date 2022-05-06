@@ -1,0 +1,126 @@
+body{
+    background-image: url("bg.jpg");
+    color:white;
+
+}
+#Data{
+    top:50%;
+}
+#Contributions{
+    position:absolute;
+    top:60%;
+    font-size: 30px;
+}
+
+#username{
+    position:absolute;
+    top:55%;
+    font-size: 30px;
+}
+#time{
+    position:absolute;
+
+    top:65%;
+    font-size: 30px;
+}
+h1
+{
+    position: absolute;
+    font-size: 40px;
+    left:45%;
+}
+
+#head{
+    display: flexbox;
+}
+#head img{
+    float:left;
+    position:absolute;
+}
+form{
+    text-align: center;
+}
+label{
+    top:30%;
+    position: absolute;
+}
+input{
+    top:30%;
+    position: absolute;
+    font-size: 30px;
+}
+
+#ide{
+    left:30%;
+    font-size:30px;
+}
+ul{
+    left: 30%;
+    text-align: center;
+    top:40%;
+    position: absolute;
+    font-size: 30px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+}
+
+@media (max-width: 800px) {
+    #handle{
+        left:60%;
+        width:250px;
+    }
+  }
+  @media (min-width: 800px) {
+    #handle{
+        left:45%;
+        width:400px;
+    }
+  }
+myChart{
+    position:absolute;
+    top:40%;
+}
+li{
+    display: inline;
+    font-size: 40px;
+    float: leftS;
+}
+table,th,td{
+    font-size: 40px;
+    border:1px solid white;
+    border-collapse: collapse;
+}
+#ta{
+    position:absolute;
+    display:none;
+    top:65%;
+    left:30%;
+}
+#link{
+    position:absolute;
+    left:30%;
+    top:55%;
+    left:30%;
+    font-size: 40px;
+}
+#general{
+    display: inline;
+}
+#chartbutt{
+    display: inline;
+}
+#blogbutt{
+    display: inline;
+}
+#contbutt{
+    display: inline;
+}
+#friendbutt{
+    display: inline;
+}
+#goback{
+    display: none;
+}

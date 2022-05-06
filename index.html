@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Codeforces go brrrrr
+    </title>
+<link rel="stylesheet" href="Style.css">
+<script src="back.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+
+
+</head>
+<body>
+    <div id="head">
+        <img src="download.png">
+        <h1 id="okbhai"></h1>
+    </div>
+    <form id="cpbhai">
+        <label for="fi" id="ide">CodeForces ID</label>
+        <input type="text" id="handle" placeholder="Your Official ID" size="10">
+    </form>
+    <br>
+    <ul>
+        <li><button id="general" onclick="general();hide()">See General information</button></li>
+        <li><button id="chartbutt" onclick="chart();hide()">See Chart</button></li>
+        <li><button id="blogbutt" onclick="blog();hide()">See Blog</button></li>
+        <li><button id="friendbutt" onclick="friend();hide()">See Frands</button></li>
+        <li><button id="contbutt" onclick="contest();hide()">See Contests</button></li>
+        <li><button id="goback" onclick="back()">Go Back</button></li>
+    </ul>
+        
+        
+    <h1 id="Data"></h1>
+    <p id="username"></p>
+    <p id="Contributions"></p>
+    <p id="time"></p>
+    <p id="demo"></p>
+    <table id="ta">
+        <tr>
+            <th>Serial Number</th>
+            <th>Contest Name</th>
+            <th>Rank</th>
+        </tr>
+        <tr>
+            <td id="s1">1</td>
+            <td id="c1"></td>
+            <td id="r1"></td>
+        </tr>
+        <tr>
+            <td id="s2"></td>
+            <td id="c2"></td>
+            <td id="r2"></td>
+        </tr>
+        <tr>
+            <td id="s3"></td>
+            <td id="c3"></td>
+            <td id="r3"></td>
+        </tr>
+    </table>
+    <a href="" id="link"></a>
+    <script src="random.js"></script>
+
+
+</body>
