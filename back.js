@@ -390,8 +390,8 @@ async function chart(){
         async function friend(){
             handle=document.getElementById("handle").value;
 
-            process.env.secret;
-            process.env.key;
+            const secret=process.env.secret;
+            const key = process.env.key;
             url="https://codeforces.com/api/user.friends?onlyOnline=true&apiKey="+key+"&time="+ Math.round((new Date()).getTime() / 1000)+"&apiSig=123456"+SHA512("123456/user.friends?apiKey="+key+"&onlyOnline=true"+"&time="+ Math.round((new Date()).getTime() / 1000)+"#"+secret)
             var resp=await fetch(url);
             var data= await resp.json();
