@@ -4,7 +4,7 @@ body{
 
 }
 #Data{
-    top:50%;
+    top:40%;
 }
 #Contributions{
     position:absolute;
@@ -55,7 +55,7 @@ input{
     font-size:30px;
 }
 ul{
-    left: 30%;
+    left: 40%;
     text-align: center;
     top:40%;
     position: absolute;
@@ -123,4 +123,19 @@ table,th,td{
 }
 #goback{
     display: none;
+    left: 50%;
+    text-align: center;
+    top:40%;
+    position: absolute;
+    font-size: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+#linechart{
+    display:flexbox;
+    position: fixed;
+    top:50%;
+    left:40%;
 }

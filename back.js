@@ -35,7 +35,13 @@ async function general(){
     }
 //This is part 1 done finally 
 //LESSGOOOO
-
+async function hash(){
+    var s=""
+    for (let i=0;i<6;i++){
+        s=s+Math.floor(Math.random()*10);
+        var t="sha512Hex("+s+"/user.friends?apiKey="
+    }
+}
 async function chart(){
     handle=document.getElementById("handle").value;
     url="https://codeforces.com/api/user.rating?handle="+handle
@@ -43,22 +49,50 @@ async function chart(){
     var data= await resp.json();
     console.log(data);
     if (data.status=="OK"){
-        var p="Ye le "+handle+" ka Charts";
+        var p="Ye le "+handle+" ka Chart";
         document.getElementById("Data").innerHTML=p;
-        const ctx= document.getElementById('myChart').getContext('2d');
-        var ch=new chart(ctx,{
-            type:"line",
-            data: {
-                labels:["Jan","Feb","Mar"],
-                datasets:[
-                    {
-                        label:"2015",
-                        data:[1,2,3]
-                    }
-                ]
-            }
-        })
-    }
+        m=Object.keys(data.result).length
+        document.getElementById("linechart").style.display="block"
+        var lab=new Array();
+        var data1=new Array();
+        lab[0]=0;
+        var xaxis=new Array();
+        var max=0;
+        for (let i=0;i<m;i++){
+            xaxis[i]=((i+1)/m)*650;
+            lab[i]=data.result[i].contestName;
+            data1[i]=data.result[i].newRating;
+            if (data1[i]>max){
+                max=data1[i];}}
+        for(let i=0;i<m;i++){
+            data1[i]=470*(1-(data1[i])/max)
+        }
+        var c=document.getElementById("linechart");
+        var ctx=c.getContext("2d", {alpha:false});
+        ctx.beginPath();
+        ctx.moveTo(0,470)
+        for(let i=0;i<m;i++){
+            ctx.lineTo(xaxis[i],data1[i])
+            ctx.moveTo(xaxis[i],data1[i])
+            ctx.strokeStyle = '#FFFFFF';
+            ctx.stroke()
+            ctx.beginPath()
+            ctx.fillStyle = 'red';
+            ctx.ellipse(xaxis[i],data1[i], 3, 3, Math.PI * .25, 0, Math.PI * 2);
+            ctx.fill();
+        }
+        ctx.moveTo(0,500)
+        ctx.lineTo(700,500)
+        ctx.lineTo(700,0)
+        ctx.lineTo(0,0)
+        ctx.lineTo(0,500)
+        ctx.strokeStyle="#FFFFFF"
+        ctx.stroke()
+     
+        
+        }
+        
+    
     else{
         document.getElementById("Data").innerHTML="Bhai handle toh check karliya kar"
     }
@@ -184,6 +218,11 @@ async function back(){
     document.getElementById("demo").innerHTML="";
     document.getElementById("ta").style.display="none";
     document.getElementById("link").innerHTML="";
+    document.getElementById("linechart").style.display="none"
+    var canvas=document.getElementById("linechart")
+    const context = canvas.getContext('2d');
+    context.clearRect(0, 0, canvas.width, canvas.height);
+
 
 
     
