@@ -390,9 +390,9 @@ async function chart(){
         async function friend(){
             handle=document.getElementById("handle").value;
 
-            var key="b847882dcdc4ff1dd86de0ae70bd49bdb1f46f33"
-            var sec="d28365bb7d2943db55e816c06345ae31d7e96669"
-            url="https://codeforces.com/api/user.friends?onlyOnline=true&apiKey="+key+"&time="+ Math.round((new Date()).getTime() / 1000)+"&apiSig=123456"+SHA512("123456/user.friends?apiKey="+key+"&onlyOnline=true"+"&time="+ Math.round((new Date()).getTime() / 1000)+"#"+sec)
+            process.env.secret;
+            process.env.key;
+            url="https://codeforces.com/api/user.friends?onlyOnline=true&apiKey="+key+"&time="+ Math.round((new Date()).getTime() / 1000)+"&apiSig=123456"+SHA512("123456/user.friends?apiKey="+key+"&onlyOnline=true"+"&time="+ Math.round((new Date()).getTime() / 1000)+"#"+secret)
             var resp=await fetch(url);
             var data= await resp.json();
             console.log(url)
