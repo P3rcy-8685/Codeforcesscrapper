@@ -391,8 +391,8 @@ async function chart(){
             handle=document.getElementById("handle").value;
 
             var secret="//enter secret key from codeforces "
-            var key = "//enter public key from codeforces "
-            url="https://codeforces.com/api/user.friends?onlyOnline=true&apiKey="+key+"&time="+ Math.round((new Date()).getTime() / 1000)+"&apiSig=123456"+SHA512("123456/user.friends?apiKey="+key+"&onlyOnline=true"+"&time="+ Math.round((new Date()).getTime() / 1000)+"#"+secret)
+            var ke = "//enter public key from codeforces "
+            url="https://codeforces.com/api/user.friends?onlyOnline=true&apiKey="+ke+"&time="+ Math.round((new Date()).getTime() / 1000)+"&apiSig=123456"+SHA512("123456/user.friends?apiKey="+ke+"&onlyOnline=true"+"&time="+ Math.round((new Date()).getTime() / 1000)+"#"+secret)
             var resp=await fetch(url);
             var data= await resp.json();
             console.log(url)
